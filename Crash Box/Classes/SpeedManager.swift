@@ -70,6 +70,7 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
     private let locationManager: CLLocationManager
     
     override init() {
+        print("herererererere")
         locationManager = CLLocationManager()
         currentSpeed = 0.0
         maxSpeed = 0.0
@@ -77,12 +78,15 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
         super.init()
         
         restoreSpeeds()
+//        startTracking()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     func startTracking() {
+        print("hereghgfhfgfgfg")
         if CLLocationManager.authorizationStatus() == .notDetermined {
+            print("dsajdgaj")
             locationManager.requestWhenInUseAuthorization()
         }
         
@@ -118,9 +122,10 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
     }
     
     // MARK: CLLocationManagerDelegate
-    @objc func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else { return }
-        
+        print("last location speed \(lastLocation.speed)")
         updateSpeed(speedInMetersPerSecond: lastLocation.speed)
     }
 }
@@ -151,7 +156,7 @@ extension SpeedTracker {
 
 
 func formatForCurrentLocale(speedInMetersPerSecond speed: Double) -> String {
-        let convertedSpeed = round(speed * 3.6)
-        let speedString = String(format: "%.0f", convertedSpeed)
-        return "\(speedString) km/h"
+//        let convertedSpeed = round(speed * 3.6)
+//        let speedString = String(format: "%.0f", convertedSpeed)
+        return "\(speed) km/h"
 }

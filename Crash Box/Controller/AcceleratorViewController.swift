@@ -8,12 +8,13 @@
 
 import UIKit
 import CoreMotion
+import CoreLocation
 
 class AcceleratorViewController: UIViewController {
     
     //MARK: - Variables
     var motionManager = CMMotionManager()
-     var speedTracker: SpeedTracker! = SpeedTracker()
+    var speedTracker: SpeedTracker! = SpeedTracker()
     
     @IBOutlet weak var speedLabel: UILabel!
     
@@ -25,7 +26,7 @@ class AcceleratorViewController: UIViewController {
         print("speed: \(speedTracker.currentSpeed)")
         print("max: \(speedTracker.maxSpeed)")
         
-//        formatAndUpdateLabels(currentSpeed: speedTracker.currentSpeed, maxSpeed: speedTracker.maxSpeed)
+        formatAndUpdateLabels(currentSpeed: speedTracker.currentSpeed, maxSpeed: speedTracker.maxSpeed)
         
             NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: SpeedTracker.Notifications.CurrentSpeedNotification.rawValue), object: speedTracker, queue: OperationQueue.main, using: { (notification) in
                 
@@ -39,6 +40,7 @@ class AcceleratorViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        startTrackingOrShowLocationAlert()
         accelerometerValuesInG()
     }
     
@@ -64,6 +66,18 @@ class AcceleratorViewController: UIViewController {
     
     private func formatAndUpdateLabels(currentSpeed currentSpeed: Double, maxSpeed: Double) {
         speedLabel.text = "speed: \(formatForCurrentLocale(speedInMetersPerSecond: currentSpeed))"
+    }
+    
+    private func startTrackingOrShowLocationAlert() {
+        speedTracker.startTracking()
+        
+        let locationPermissions = CLLocationManager.authorizationStatus()
+        if locationPermissions == .restricted || locationPermissions == .denied {
+            let alertController = UIAlertController(title: "Location Services Required", message: "Location services must be enabled for this app, and turned on in Settings, in order to display your speed.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }
 
