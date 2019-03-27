@@ -13,11 +13,29 @@ class AcceleratorViewController: UIViewController {
     
     //MARK: - Variables
     var motionManager = CMMotionManager()
+     var speedTracker: SpeedTracker! = SpeedTracker()
     
+    @IBOutlet weak var speedLabel: UILabel!
+    
+    
+    //MARK: - Main functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("speed: \(speedTracker.currentSpeed)")
+        print("max: \(speedTracker.maxSpeed)")
+        
+//        formatAndUpdateLabels(currentSpeed: speedTracker.currentSpeed, maxSpeed: speedTracker.maxSpeed)
+        
+            NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: SpeedTracker.Notifications.CurrentSpeedNotification.rawValue), object: speedTracker, queue: OperationQueue.main, using: { (notification) in
+                
+                guard let currentSpeedNumber = notification.userInfo?[SpeedTracker.Notifications.CurrentSpeed] as? NSNumber,
+                    let maxSpeedNumber = notification.userInfo?[SpeedTracker.Notifications.MaxSpeed] as? NSNumber else {
+                        fatalError()
+                }
 
-        // Do any additional setup after loading the view.
+                self.formatAndUpdateLabels(currentSpeed: currentSpeedNumber.doubleValue, maxSpeed: maxSpeedNumber.doubleValue)
+            })
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,21 +47,23 @@ class AcceleratorViewController: UIViewController {
         motionManager.accelerometerUpdateInterval = 0.2
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
             if let accelData = data{
-                var x = accelData.acceleration.x
-                var y = accelData.acceleration.y
-                var z = accelData.acceleration.z
                 
+                let x = accelData.acceleration.x
+                let y = accelData.acceleration.y
+                let z = accelData.acceleration.z
 //                print("x is \(accelData.acceleration.x)")
 //                x = x * 10
 //                y = y * 10
 //                z = z * 10
-                
                 let g = (x * x) + (y * y) + (z * z)
                 let underRoot = g.squareRoot()
-                print("under root \(underRoot)")
-                
-                
+//                print("Total G value \(underRoot)")
             }
         }
     }
+    
+    private func formatAndUpdateLabels(currentSpeed currentSpeed: Double, maxSpeed: Double) {
+        speedLabel.text = "speed: \(formatForCurrentLocale(speedInMetersPerSecond: currentSpeed))"
+    }
 }
+
