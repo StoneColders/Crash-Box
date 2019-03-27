@@ -6,52 +6,6 @@
 //  Copyright © 2019 Sarvad shetty. All rights reserved.
 //
 
-//import CoreLocation
-//
-//typealias Speed = CLLocationSpeed
-//
-//protocol SpeedManagerDelegate {
-//    func speedDidChange(speed: Speed)
-//}
-//
-//class SpeedManager: NSObject, CLLocationManagerDelegate {
-//
-//    var delegate: SpeedManagerDelegate?
-//    private let locationManager: CLLocationManager?
-//
-//    override init() {
-//        locationManager = CLLocationManager.locationServicesEnabled() ? CLLocationManager() : nil
-//
-//        super.init()
-//
-//        if let locationManager = self.locationManager {
-//            locationManager.delegate = self
-//            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-//
-//            if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.notDetermined {
-//                locationManager.requestAlwaysAuthorization()
-//            } else if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways {
-//                locationManager.startUpdatingLocation()
-//            }
-//        }
-//    }
-//
-//    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-//        if status == CLAuthorizationStatus.authorizedAlways {
-//            locationManager?.startUpdatingLocation()
-//        }
-//    }
-//
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if locations.count > 0 {
-//            let kmph = max(locations[locations.count - 1].speed / 1000 * 3600, 0);
-//            delegate?.speedDidChange(speed: kmph);
-//        }
-//    }
-//
-//}
-
-
 import Foundation
 import CoreLocation
 
@@ -70,7 +24,6 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
     private let locationManager: CLLocationManager
     
     override init() {
-        print("herererererere")
         locationManager = CLLocationManager()
         currentSpeed = 0.0
         maxSpeed = 0.0
@@ -78,7 +31,6 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
         super.init()
         
         restoreSpeeds()
-//        startTracking()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
@@ -156,7 +108,7 @@ extension SpeedTracker {
 
 
 func formatForCurrentLocale(speedInMetersPerSecond speed: Double) -> String {
-//        let convertedSpeed = round(speed * 3.6)
-//        let speedString = String(format: "%.0f", convertedSpeed)
-        return "\(speed) km/h"
+        let convertedSpeed = round(speed * 3.6)
+        let speedString = String(format: "%.0f", convertedSpeed)
+        return "\(speedString) km/h"
 }

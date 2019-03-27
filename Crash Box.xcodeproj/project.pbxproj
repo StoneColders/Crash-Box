@@ -14,7 +14,6 @@
 		40173FFF224BDEA100273E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40173FFE224BDEA100273E4B /* Assets.xcassets */; };
 		40174002224BDEA100273E4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40174000224BDEA100273E4B /* LaunchScreen.storyboard */; };
 		4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4017400C224BE8B100273E4B /* AcceleratorViewController.swift */; };
-		40174011224C144F00273E4B /* SpeedNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40174010224C144F00273E4B /* SpeedNotifier.swift */; };
 		40174013224C146800273E4B /* SpeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40174012224C146800273E4B /* SpeedManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +26,6 @@
 		40174001224BDEA100273E4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40174003224BDEA100273E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4017400C224BE8B100273E4B /* AcceleratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceleratorViewController.swift; sourceTree = "<group>"; };
-		40174010224C144F00273E4B /* SpeedNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedNotifier.swift; sourceTree = "<group>"; };
 		40174012224C146800273E4B /* SpeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedManager.swift; sourceTree = "<group>"; };
 		B2BEE283395FFC0C7CA44A13 /* Pods_Crash_Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crash_Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB53D51190E5D5EC9A154EBB /* Pods-Crash Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crash Box.release.xcconfig"; path = "Target Support Files/Pods-Crash Box/Pods-Crash Box.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		40174014224C148100273E4B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				40174010224C144F00273E4B /* SpeedNotifier.swift */,
 				40174012224C146800273E4B /* SpeedManager.swift */,
 			);
 			path = Classes;
@@ -253,7 +250,6 @@
 				4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */,
 				40174013224C146800273E4B /* SpeedManager.swift in Sources */,
 				40173FF8224BDE9F00273E4B /* AppDelegate.swift in Sources */,
-				40174011224C144F00273E4B /* SpeedNotifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
