@@ -1,6 +1,0 @@
-framework module SensingKit {
-  umbrella header "SensingKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
