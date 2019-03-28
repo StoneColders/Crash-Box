@@ -34,6 +34,12 @@ class MapViewController: UIViewController {
         locationManager.startUpdatingLocation()
         mapView.setMinZoom(4.6, maxZoom: 20)
     }
+    
+    //MARK: - IBActions
+    @IBAction func refreshButton(_ sender: UIButton) {
+        fetchNearbyPlaces(coordinate: mapView.camera.target)
+    }
+    
 }
 
 //MARK: - Extensions
@@ -63,7 +69,7 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
     private func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
-        mapView.clear()
+//        mapView.clear()
         dataProvider.fetchPlacesNearCoordinate(coordinate, radius:searchRadius, types: searchedTypes) { places in
             places.forEach {
                 let marker = PlaceMarker(place: $0)
@@ -90,27 +96,31 @@ extension MapViewController: GMSMapViewDelegate {
         }
     }
 
-    
     func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
         guard let placeMarker = marker as? PlaceMarker else {
             return nil
         }
-
-//        guard let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView else {
-//            return nil
-//        }
-//        infoView.nameLabel.text = placeMarker.place.name
-//
-//        if let photo = placeMarker.place.photo {
-//            infoView.placePhoto.image = photo
-//        } else {
-//            infoView.placePhoto.image = UIImage(named: "generic")
-//        }
-
-//        return infoView
         
-        let infoView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        infoView.backgroundColor = UIColor.red
-        return infoView
+        guard let mdetail = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapDetailViewController") as? MapDetailViewController else {
+            fatalError("couldnt mssgs")
+        }
+        
+        if let photo = placeMarker.place.photo {
+            mdetail.image = photo
+        }else{
+            mdetail.image = nil
+        }
+        
+        let name = placeMarker.place.name
+        mdetail.name = name
+        mdetail.long = placeMarker.place.coordinate.longitude
+        mdetail.lat = placeMarker.place.coordinate.longitude
+        
+        print("coordinate: \(placeMarker.place.coordinate)")
+        
+        self.present(mdetail, animated: true, completion: nil)
+
+        
+        return UIView()
     }
 }

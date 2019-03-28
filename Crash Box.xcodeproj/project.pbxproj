@@ -21,7 +21,6 @@
 		409E579D224C65610064121C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E579C224C65610064121C /* Colors.swift */; };
 		409E579F224C6AED0064121C /* CustomTabbarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E579E224C6AED0064121C /* CustomTabbarHeader.swift */; };
 		409E57A1224C6CC90064121C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57A0224C6CC90064121C /* MapViewController.swift */; };
-		409E57A3224C6CDA0064121C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57A2224C6CDA0064121C /* SettingsViewController.swift */; };
 		409E57AF224C7A100064121C /* CircularStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57A7224C7A0F0064121C /* CircularStd-BoldItalic.otf */; };
 		409E57B0224C7A100064121C /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57A8224C7A0F0064121C /* CircularStd-Black.otf */; };
 		409E57B1224C7A100064121C /* CircularStd-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57A9224C7A0F0064121C /* CircularStd-BookItalic.otf */; };
@@ -36,6 +35,11 @@
 		409E57BF224CDC9E0064121C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 409E57BE224CDC9E0064121C /* GoogleService-Info.plist */; };
 		409E57C1224CDCF40064121C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57C0224CDCF40064121C /* FormViewController.swift */; };
 		409E57C4224CDE530064121C /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57C3224CDE530064121C /* Textfield.swift */; };
+		409E57CB224D34720064121C /* road moving.json in Resources */ = {isa = PBXBuildFile; fileRef = 409E57C9224D34710064121C /* road moving.json */; };
+		409E57CC224D34720064121C /* road still.json in Resources */ = {isa = PBXBuildFile; fileRef = 409E57CA224D34720064121C /* road still.json */; };
+		409E57CE224D3F950064121C /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57CD224D3F950064121C /* MapDetailViewController.swift */; };
+		409E57D0224D57B40064121C /* beacon.json in Resources */ = {isa = PBXBuildFile; fileRef = 409E57CF224D57B40064121C /* beacon.json */; };
+		409E57D2224D5A940064121C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57D1224D5A940064121C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +58,6 @@
 		409E579C224C65610064121C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		409E579E224C6AED0064121C /* CustomTabbarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarHeader.swift; sourceTree = "<group>"; };
 		409E57A0224C6CC90064121C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		409E57A2224C6CDA0064121C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		409E57A7224C7A0F0064121C /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
 		409E57A8224C7A0F0064121C /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
 		409E57A9224C7A0F0064121C /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
@@ -69,6 +72,11 @@
 		409E57BE224CDC9E0064121C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		409E57C0224CDCF40064121C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		409E57C3224CDE530064121C /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
+		409E57C9224D34710064121C /* road moving.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "road moving.json"; sourceTree = "<group>"; };
+		409E57CA224D34720064121C /* road still.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "road still.json"; sourceTree = "<group>"; };
+		409E57CD224D3F950064121C /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
+		409E57CF224D57B40064121C /* beacon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacon.json; sourceTree = "<group>"; };
+		409E57D1224D5A940064121C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B2BEE283395FFC0C7CA44A13 /* Pods_Crash_Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crash_Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB53D51190E5D5EC9A154EBB /* Pods-Crash Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crash Box.release.xcconfig"; path = "Target Support Files/Pods-Crash Box/Pods-Crash Box.release.xcconfig"; sourceTree = "<group>"; };
 		CC6371D12311F619CBE9BDB9 /* Pods-Crash Box.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crash Box.debug.xcconfig"; path = "Target Support Files/Pods-Crash Box/Pods-Crash Box.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +179,9 @@
 		409E5796224C36700064121C /* JSON Files */ = {
 			isa = PBXGroup;
 			children = (
+				409E57CF224D57B40064121C /* beacon.json */,
+				409E57C9224D34710064121C /* road moving.json */,
+				409E57CA224D34720064121C /* road still.json */,
 				409E5797224C48360064121C /* crash box.json */,
 			);
 			path = "JSON Files";
@@ -190,7 +201,8 @@
 			children = (
 				4017400C224BE8B100273E4B /* AcceleratorViewController.swift */,
 				409E57A0224C6CC90064121C /* MapViewController.swift */,
-				409E57A2224C6CDA0064121C /* SettingsViewController.swift */,
+				409E57CD224D3F950064121C /* MapDetailViewController.swift */,
+				409E57D1224D5A940064121C /* SettingsViewController.swift */,
 			);
 			path = "Main module";
 			sourceTree = "<group>";
@@ -308,13 +320,16 @@
 			files = (
 				409E57BF224CDC9E0064121C /* GoogleService-Info.plist in Resources */,
 				409E57B0224C7A100064121C /* CircularStd-Black.otf in Resources */,
+				409E57CB224D34720064121C /* road moving.json in Resources */,
 				409E57B3224C7A100064121C /* CircularStd-Bold.otf in Resources */,
 				409E57B1224C7A100064121C /* CircularStd-BookItalic.otf in Resources */,
 				409E57AF224C7A100064121C /* CircularStd-BoldItalic.otf in Resources */,
 				409E57B2224C7A100064121C /* CircularStd-Book.otf in Resources */,
 				409E57B4224C7A100064121C /* CircularStd-Medium.otf in Resources */,
+				409E57CC224D34720064121C /* road still.json in Resources */,
 				409E5798224C48360064121C /* crash box.json in Resources */,
 				409E57B6224C7A100064121C /* CircularStd-MediumItalic.otf in Resources */,
+				409E57D0224D57B40064121C /* beacon.json in Resources */,
 				40174002224BDEA100273E4B /* LaunchScreen.storyboard in Resources */,
 				409E57B5224C7A100064121C /* CircularStd-BlackItalic.otf in Resources */,
 				40173FFF224BDEA100273E4B /* Assets.xcassets in Resources */,
@@ -412,8 +427,9 @@
 				409E57BB224CB33A0064121C /* GooglePlace.swift in Sources */,
 				409E57BD224CB3600064121C /* GoogleDataProvider.swift in Sources */,
 				4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */,
-				409E57A3224C6CDA0064121C /* SettingsViewController.swift in Sources */,
 				409E579F224C6AED0064121C /* CustomTabbarHeader.swift in Sources */,
+				409E57D2224D5A940064121C /* SettingsViewController.swift in Sources */,
+				409E57CE224D3F950064121C /* MapDetailViewController.swift in Sources */,
 				409E57A1224C6CC90064121C /* MapViewController.swift in Sources */,
 				409E579D224C65610064121C /* Colors.swift in Sources */,
 				409E57B8224CB1430064121C /* Marker.swift in Sources */,

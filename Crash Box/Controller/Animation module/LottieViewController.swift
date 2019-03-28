@@ -31,10 +31,26 @@ class LottieViewController: UIViewController {
         animationView.setAnimation(named: "crash box")
         animationView.play { (val) in
                 print(val)
-                guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else{
-                    fatalError("couldnt init")
-                }
-                self.appDelegate.window?.rootViewController = vc
+            if UserDefaults.standard.bool(forKey: "KFIRSTSTATE") == true{
+                self.goToApp()
+            }else{
+                self.goToForm()
+            }
         }
+    }
+    
+    func goToForm(){
+        guard let formVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FormViewController") as? FormViewController else{
+            fatalError("couldnt init form vc")
+        }
+        //making root view controller
+        self.appDelegate.window?.rootViewController = formVC
+    }
+    
+    func goToApp(){
+        guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else{
+            fatalError("couldnt init")
+        }
+        self.appDelegate.window?.rootViewController = vc
     }
 }

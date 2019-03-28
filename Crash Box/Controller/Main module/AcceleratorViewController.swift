@@ -9,6 +9,7 @@
 import UIKit
 import CoreMotion
 import CoreLocation
+import Lottie
 
 class AcceleratorViewController: UIViewController {
     
@@ -19,6 +20,8 @@ class AcceleratorViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var speedoViewOutlet: UIView!
+    @IBOutlet weak var animationView: LOTAnimationView!
+    
     
     //MARK: - Main functions
     override func viewDidLoad() {
@@ -53,10 +56,6 @@ class AcceleratorViewController: UIViewController {
                 let x = accelData.acceleration.x
                 let y = accelData.acceleration.y
                 let z = accelData.acceleration.z
-//                print("x is \(accelData.acceleration.x)")
-//                x = x * 10
-//                y = y * 10
-//                z = z * 10
                 let g = (x * x) + (y * y) + (z * z)
                 let underRoot = g.squareRoot()
                 print("Total G value \(underRoot)")
@@ -67,6 +66,32 @@ class AcceleratorViewController: UIViewController {
     private func formatAndUpdateLabels(currentSpeed currentSpeed: Double, maxSpeed: Double) {
         //updated speedometer data here
         speedLabel.text = "\(Int(currentSpeed))"
+        
+        if Int(currentSpeed) == 0{
+            animationView.setAnimation(named: "road still")
+            animationView.play()
+        }else if Int(currentSpeed) > 0{
+            animationView.setAnimation(named: "road moving")
+            animationView.play()
+            animationView.loopAnimation = true
+        }else{
+            animationView.setAnimation(named: "road still")
+            animationView.play()
+        }
+        
+//        let ind = 10
+        
+//        if Int(ind) == 0{
+//            animationView.setAnimation(named: "road still")
+//            animationView.play()
+//        }else if Int(ind) > 0{
+//            animationView.setAnimation(named: "road moving")
+//            animationView.play()
+//            animationView.loopAnimation = true
+//        }else{
+//            animationView.setAnimation(named: "road still")
+//            animationView.play()
+//        }
     }
     
     private func startTrackingOrShowLocationAlert() {
