@@ -265,16 +265,24 @@
                                     <constraint firstAttribute="bottom" secondItem="FSh-aY-Nks" secondAttribute="bottom" constant="10" id="nZ7-hF-O7N"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y49-zo-DMA" customClass="LOTAnimationView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549019607843" green="0.082352941176470587" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Y49-zo-DMA" firstAttribute="top" secondItem="qtA-2o-QSE" secondAttribute="top" id="62h-5T-9Ag"/>
                             <constraint firstItem="5Wy-3s-WT2" firstAttribute="trailing" secondItem="fEG-vI-1Gy" secondAttribute="trailing" id="6GU-sa-wcV"/>
                             <constraint firstItem="5Wy-3s-WT2" firstAttribute="top" secondItem="qtA-2o-QSE" secondAttribute="top" id="GSr-Cg-W6g"/>
                             <constraint firstItem="fFi-ug-lHa" firstAttribute="leading" secondItem="fEG-vI-1Gy" secondAttribute="leading" id="GUS-RC-gtR"/>
                             <constraint firstItem="Rh2-Ho-8Ui" firstAttribute="leading" secondItem="fEG-vI-1Gy" secondAttribute="leading" constant="47" id="J9W-1U-dBO"/>
+                            <constraint firstItem="Y49-zo-DMA" firstAttribute="leading" secondItem="fEG-vI-1Gy" secondAttribute="leading" id="MYj-jQ-fiZ"/>
+                            <constraint firstItem="Y49-zo-DMA" firstAttribute="bottom" secondItem="fEG-vI-1Gy" secondAttribute="bottom" constant="49" id="PRZ-mR-Odd"/>
                             <constraint firstItem="fFi-ug-lHa" firstAttribute="bottom" secondItem="fEG-vI-1Gy" secondAttribute="bottom" id="Rfi-0D-rtP"/>
                             <constraint firstItem="fEG-vI-1Gy" firstAttribute="trailing" secondItem="Rh2-Ho-8Ui" secondAttribute="trailing" constant="47" id="aMq-ze-jHz"/>
                             <constraint firstItem="fFi-ug-lHa" firstAttribute="trailing" secondItem="fEG-vI-1Gy" secondAttribute="trailing" id="hlo-L2-TZz"/>
+                            <constraint firstItem="Y49-zo-DMA" firstAttribute="trailing" secondItem="fEG-vI-1Gy" secondAttribute="trailing" id="k2D-hV-bQG"/>
                             <constraint firstItem="fFi-ug-lHa" firstAttribute="top" secondItem="qtA-2o-QSE" secondAttribute="top" id="rbw-vM-DaH"/>
                             <constraint firstItem="5Wy-3s-WT2" firstAttribute="leading" secondItem="fEG-vI-1Gy" secondAttribute="leading" id="rvd-4k-Avf"/>
                             <constraint firstItem="Rh2-Ho-8Ui" firstAttribute="top" secondItem="5Wy-3s-WT2" secondAttribute="bottom" constant="110" id="wpd-ea-Rdj"/>
@@ -284,6 +292,7 @@
                     <tabBarItem key="tabBarItem" title="" image="nav1_unselected" selectedImage="nav1_Selected" id="L7J-7y-Ohw"/>
                     <connections>
                         <outlet property="animationView" destination="fFi-ug-lHa" id="kfI-lK-FEH"/>
+                        <outlet property="animationView2" destination="Y49-zo-DMA" id="GLu-tP-ALz"/>
                         <outlet property="speedLabel" destination="FSh-aY-Nks" id="WRO-ZJ-N5E"/>
                         <outlet property="speedoViewOutlet" destination="Rh2-Ho-8Ui" id="hej-qO-je4"/>
                     </connections>

@@ -10,6 +10,7 @@ import UIKit
 import CoreMotion
 import CoreLocation
 import Lottie
+import MessageUI
 
 class AcceleratorViewController: UIViewController {
     
@@ -21,16 +22,20 @@ class AcceleratorViewController: UIViewController {
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var speedoViewOutlet: UIView!
     @IBOutlet weak var animationView: LOTAnimationView!
+    @IBOutlet weak var animationView2: LOTAnimationView!
     
     
     //MARK: - Main functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        formatAndUpdateLabels(currentSpeed: speedTracker.currentSpeed, maxSpeed: speedTracker.maxSpeed)
+        animationView2.isHidden = true
+//        testMessage()
         
+        formatAndUpdateLabels(currentSpeed: speedTracker.currentSpeed, maxSpeed: speedTracker.maxSpeed)
+
             NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: SpeedTracker.Notifications.CurrentSpeedNotification.rawValue), object: speedTracker, queue: OperationQueue.main, using: { (notification) in
-                
+
                 guard let currentSpeedNumber = notification.userInfo?[SpeedTracker.Notifications.CurrentSpeed] as? NSNumber,
                     let maxSpeedNumber = notification.userInfo?[SpeedTracker.Notifications.MaxSpeed] as? NSNumber else {
                         fatalError()
@@ -38,13 +43,28 @@ class AcceleratorViewController: UIViewController {
 
                 self.formatAndUpdateLabels(currentSpeed: currentSpeedNumber.doubleValue, maxSpeed: maxSpeedNumber.doubleValue)
             })
-        
+//
         setupSpeedoView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        startTrackingOrShowLocationAlert()
-//        accelerometerValuesInG()
+        startTrackingOrShowLocationAlert()
+        accelerometerValuesInG()
+    }
+    
+    //MARK: - Functions
+    func testMessage(){
+        let composeVC = MFMessageComposeViewController()
+        composeVC.messageComposeDelegate = self
+        
+        // Configure the fields of the interface.
+        composeVC.recipients = ["8826033466"]
+        composeVC.body = "Hello from California!"
+        
+//        composeVC.se
+        
+        // Present the view controller modally.
+        self.present(composeVC, animated: true, completion: nil)
     }
     
     //MARK: - Core Motion functions
@@ -59,11 +79,25 @@ class AcceleratorViewController: UIViewController {
                 let g = (x * x) + (y * y) + (z * z)
                 let underRoot = g.squareRoot()
                 print("Total G value \(underRoot)")
+                
+                if(underRoot > 4){
+                    self.setBeacon()
+                }else{
+                    self.animationView2.isHidden = true
+                }
             }
         }
     }
     
-    private func formatAndUpdateLabels(currentSpeed currentSpeed: Double, maxSpeed: Double) {
+    func setBeacon(){
+        self.animationView2.isHidden = false
+        motionManager.stopAccelerometerUpdates()
+        self.animationView2.setAnimation(named: "beacon")
+        self.animationView2.play()
+        self.animationView2.loopAnimation = true
+    }
+    
+    private func formatAndUpdateLabels(currentSpeed: Double, maxSpeed: Double) {
         //updated speedometer data here
         speedLabel.text = "\(Int(currentSpeed))"
         
@@ -118,3 +152,9 @@ class AcceleratorViewController: UIViewController {
     }
 }
 
+
+extension AcceleratorViewController: MFMessageComposeViewControllerDelegate{
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        print("hi")
+    }
+}
