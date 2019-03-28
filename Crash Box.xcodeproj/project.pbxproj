@@ -20,6 +20,22 @@
 		409E579A224C64FB0064121C /* Helper+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E5799224C64FB0064121C /* Helper+Functions.swift */; };
 		409E579D224C65610064121C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E579C224C65610064121C /* Colors.swift */; };
 		409E579F224C6AED0064121C /* CustomTabbarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E579E224C6AED0064121C /* CustomTabbarHeader.swift */; };
+		409E57A1224C6CC90064121C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57A0224C6CC90064121C /* MapViewController.swift */; };
+		409E57A3224C6CDA0064121C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57A2224C6CDA0064121C /* SettingsViewController.swift */; };
+		409E57AF224C7A100064121C /* CircularStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57A7224C7A0F0064121C /* CircularStd-BoldItalic.otf */; };
+		409E57B0224C7A100064121C /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57A8224C7A0F0064121C /* CircularStd-Black.otf */; };
+		409E57B1224C7A100064121C /* CircularStd-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57A9224C7A0F0064121C /* CircularStd-BookItalic.otf */; };
+		409E57B2224C7A100064121C /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57AA224C7A0F0064121C /* CircularStd-Book.otf */; };
+		409E57B3224C7A100064121C /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57AB224C7A0F0064121C /* CircularStd-Bold.otf */; };
+		409E57B4224C7A100064121C /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57AC224C7A0F0064121C /* CircularStd-Medium.otf */; };
+		409E57B5224C7A100064121C /* CircularStd-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57AD224C7A0F0064121C /* CircularStd-BlackItalic.otf */; };
+		409E57B6224C7A100064121C /* CircularStd-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409E57AE224C7A100064121C /* CircularStd-MediumItalic.otf */; };
+		409E57B8224CB1430064121C /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57B7224CB1430064121C /* Marker.swift */; };
+		409E57BB224CB33A0064121C /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57BA224CB33A0064121C /* GooglePlace.swift */; };
+		409E57BD224CB3600064121C /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57BC224CB3600064121C /* GoogleDataProvider.swift */; };
+		409E57BF224CDC9E0064121C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 409E57BE224CDC9E0064121C /* GoogleService-Info.plist */; };
+		409E57C1224CDCF40064121C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57C0224CDCF40064121C /* FormViewController.swift */; };
+		409E57C4224CDE530064121C /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E57C3224CDE530064121C /* Textfield.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +53,22 @@
 		409E5799224C64FB0064121C /* Helper+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Functions.swift"; sourceTree = "<group>"; };
 		409E579C224C65610064121C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		409E579E224C6AED0064121C /* CustomTabbarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarHeader.swift; sourceTree = "<group>"; };
+		409E57A0224C6CC90064121C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		409E57A2224C6CDA0064121C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		409E57A7224C7A0F0064121C /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		409E57A8224C7A0F0064121C /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
+		409E57A9224C7A0F0064121C /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
+		409E57AA224C7A0F0064121C /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		409E57AB224C7A0F0064121C /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		409E57AC224C7A0F0064121C /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		409E57AD224C7A0F0064121C /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
+		409E57AE224C7A100064121C /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
+		409E57B7224CB1430064121C /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		409E57BA224CB33A0064121C /* GooglePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		409E57BC224CB3600064121C /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		409E57BE224CDC9E0064121C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		409E57C0224CDCF40064121C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		409E57C3224CDE530064121C /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 		B2BEE283395FFC0C7CA44A13 /* Pods_Crash_Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crash_Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB53D51190E5D5EC9A154EBB /* Pods-Crash Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crash Box.release.xcconfig"; path = "Target Support Files/Pods-Crash Box/Pods-Crash Box.release.xcconfig"; sourceTree = "<group>"; };
 		CC6371D12311F619CBE9BDB9 /* Pods-Crash Box.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crash Box.debug.xcconfig"; path = "Target Support Files/Pods-Crash Box/Pods-Crash Box.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +115,8 @@
 		40173FF6224BDE9F00273E4B /* Crash Box */ = {
 			isa = PBXGroup;
 			children = (
+				409E57B9224CB3180064121C /* Model */,
+				409E57A6224C79FB0064121C /* Fonts */,
 				409E5796224C36700064121C /* JSON Files */,
 				40174014224C148100273E4B /* Classes */,
 				4017400B224BDEE400273E4B /* Services */,
@@ -90,6 +124,7 @@
 				409E579B224C65000064121C /* Helpers */,
 				4017400A224BDEDD00273E4B /* View */,
 				40173FFE224BDEA100273E4B /* Assets.xcassets */,
+				409E57BE224CDC9E0064121C /* GoogleService-Info.plist */,
 				40174003224BDEA100273E4B /* Info.plist */,
 			);
 			path = "Crash Box";
@@ -98,9 +133,9 @@
 		40174009224BDED100273E4B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				40173FF9224BDE9F00273E4B /* ViewController.swift */,
-				4017400C224BE8B100273E4B /* AcceleratorViewController.swift */,
-				409173AB224C344100044CB0 /* LottieViewController.swift */,
+				409E57C2224CDCFC0064121C /* Reg module */,
+				409E57A4224C6CE90064121C /* Main module */,
+				409E57A5224C6E570064121C /* Animation module */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -127,6 +162,8 @@
 			children = (
 				40174012224C146800273E4B /* SpeedManager.swift */,
 				409E579E224C6AED0064121C /* CustomTabbarHeader.swift */,
+				409E57B7224CB1430064121C /* Marker.swift */,
+				409E57C3224CDE530064121C /* Textfield.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -146,6 +183,57 @@
 				409E579C224C65610064121C /* Colors.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		409E57A4224C6CE90064121C /* Main module */ = {
+			isa = PBXGroup;
+			children = (
+				4017400C224BE8B100273E4B /* AcceleratorViewController.swift */,
+				409E57A0224C6CC90064121C /* MapViewController.swift */,
+				409E57A2224C6CDA0064121C /* SettingsViewController.swift */,
+			);
+			path = "Main module";
+			sourceTree = "<group>";
+		};
+		409E57A5224C6E570064121C /* Animation module */ = {
+			isa = PBXGroup;
+			children = (
+				409173AB224C344100044CB0 /* LottieViewController.swift */,
+			);
+			path = "Animation module";
+			sourceTree = "<group>";
+		};
+		409E57A6224C79FB0064121C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				409E57A8224C7A0F0064121C /* CircularStd-Black.otf */,
+				409E57AD224C7A0F0064121C /* CircularStd-BlackItalic.otf */,
+				409E57AB224C7A0F0064121C /* CircularStd-Bold.otf */,
+				409E57A7224C7A0F0064121C /* CircularStd-BoldItalic.otf */,
+				409E57AA224C7A0F0064121C /* CircularStd-Book.otf */,
+				409E57A9224C7A0F0064121C /* CircularStd-BookItalic.otf */,
+				409E57AC224C7A0F0064121C /* CircularStd-Medium.otf */,
+				409E57AE224C7A100064121C /* CircularStd-MediumItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		409E57B9224CB3180064121C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				409E57BA224CB33A0064121C /* GooglePlace.swift */,
+				409E57BC224CB3600064121C /* GoogleDataProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		409E57C2224CDCFC0064121C /* Reg module */ = {
+			isa = PBXGroup;
+			children = (
+				40173FF9224BDE9F00273E4B /* ViewController.swift */,
+				409E57C0224CDCF40064121C /* FormViewController.swift */,
+			);
+			path = "Reg module";
 			sourceTree = "<group>";
 		};
 		6E7E200F01710C3D64549114 /* Pods */ = {
@@ -169,6 +257,7 @@
 				40173FF1224BDE9F00273E4B /* Frameworks */,
 				40173FF2224BDE9F00273E4B /* Resources */,
 				266C17F13D21CB759770193A /* [CP] Embed Pods Frameworks */,
+				C6260AD3C18109DF71763A25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,8 +306,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409E57BF224CDC9E0064121C /* GoogleService-Info.plist in Resources */,
+				409E57B0224C7A100064121C /* CircularStd-Black.otf in Resources */,
+				409E57B3224C7A100064121C /* CircularStd-Bold.otf in Resources */,
+				409E57B1224C7A100064121C /* CircularStd-BookItalic.otf in Resources */,
+				409E57AF224C7A100064121C /* CircularStd-BoldItalic.otf in Resources */,
+				409E57B2224C7A100064121C /* CircularStd-Book.otf in Resources */,
+				409E57B4224C7A100064121C /* CircularStd-Medium.otf in Resources */,
 				409E5798224C48360064121C /* crash box.json in Resources */,
+				409E57B6224C7A100064121C /* CircularStd-MediumItalic.otf in Resources */,
 				40174002224BDEA100273E4B /* LaunchScreen.storyboard in Resources */,
+				409E57B5224C7A100064121C /* CircularStd-BlackItalic.otf in Resources */,
 				40173FFF224BDEA100273E4B /* Assets.xcassets in Resources */,
 				40173FFD224BDE9F00273E4B /* Main.storyboard in Resources */,
 			);
@@ -236,13 +334,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Crash Box/Pods-Crash Box-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -271,6 +377,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C6260AD3C18109DF71763A25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crash Box/Pods-Crash Box-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Crash Box/Pods-Crash Box-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -280,11 +408,18 @@
 			files = (
 				409173AC224C344100044CB0 /* LottieViewController.swift in Sources */,
 				40173FFA224BDE9F00273E4B /* ViewController.swift in Sources */,
+				409E57C1224CDCF40064121C /* FormViewController.swift in Sources */,
+				409E57BB224CB33A0064121C /* GooglePlace.swift in Sources */,
+				409E57BD224CB3600064121C /* GoogleDataProvider.swift in Sources */,
 				4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */,
+				409E57A3224C6CDA0064121C /* SettingsViewController.swift in Sources */,
 				409E579F224C6AED0064121C /* CustomTabbarHeader.swift in Sources */,
+				409E57A1224C6CC90064121C /* MapViewController.swift in Sources */,
 				409E579D224C65610064121C /* Colors.swift in Sources */,
+				409E57B8224CB1430064121C /* Marker.swift in Sources */,
 				40174013224C146800273E4B /* SpeedManager.swift in Sources */,
 				40173FF8224BDE9F00273E4B /* AppDelegate.swift in Sources */,
+				409E57C4224CDE530064121C /* Textfield.swift in Sources */,
 				409E579A224C64FB0064121C /* Helper+Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N4FDL334LZ;
 				INFOPLIST_FILE = "Crash Box/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N4FDL334LZ;
 				INFOPLIST_FILE = "Crash Box/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

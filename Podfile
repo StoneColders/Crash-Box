@@ -7,4 +7,9 @@ target 'Crash Box' do
 
   # Pods for Crash Box
 	pod 'lottie-ios', '~> 2.5.3'
+	pod 'GoogleMaps'
+	pod 'SwiftyJSON'
+	pod 'Firebase'
+	pod 'Firebase/Database'
+	pod 'Firebase/Core'
 end

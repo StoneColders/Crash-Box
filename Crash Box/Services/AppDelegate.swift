@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import CoreLocation
+import GoogleMaps
+
+let googleApiKey = "AIzaSyDYehlAYQxuKfX9v1HtRngi4C_nNA5byVw"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = flashyRed
         UITabBar.appearance().unselectedItemTintColor = flashyRed
         
+        GMSServices.provideAPIKey(googleApiKey)
         return true
     }
 
