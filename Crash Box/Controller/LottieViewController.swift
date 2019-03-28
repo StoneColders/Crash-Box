@@ -29,7 +29,7 @@ class LottieViewController: UIViewController {
         animationView.setAnimation(named: "crash box")
         animationView.play { (val) in
                 print(val)
-                guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTab") as? UITabBarController else{
+                guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else{
                     fatalError("couldnt init")
                 }
                 self.appDelegate.window?.rootViewController = vc

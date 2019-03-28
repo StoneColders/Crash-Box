@@ -9,4 +9,5 @@
 import UIKit
 
 
-let tabBarColor = UIColor.init(<#T##r: Float##Float#>, <#T##g: Float##Float#>, <#T##b: Float##Float#>, <#T##a: Float##Float#>)
+let tabBarColor = UIColor.init(32, 45, 63, 1)
+let flashyRed = UIColor.init(255, 0, 58, 1)
