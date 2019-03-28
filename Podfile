@@ -6,5 +6,5 @@ target 'Crash Box' do
   use_frameworks!
 
   # Pods for Crash Box
-	pod 'SensingKit'
+	pod 'lottie-ios', '~> 2.5.3'
 end

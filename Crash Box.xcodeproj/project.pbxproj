@@ -15,6 +15,10 @@
 		40174002224BDEA100273E4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40174000224BDEA100273E4B /* LaunchScreen.storyboard */; };
 		4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4017400C224BE8B100273E4B /* AcceleratorViewController.swift */; };
 		40174013224C146800273E4B /* SpeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40174012224C146800273E4B /* SpeedManager.swift */; };
+		409173AC224C344100044CB0 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409173AB224C344100044CB0 /* LottieViewController.swift */; };
+		409E5798224C48360064121C /* crash box.json in Resources */ = {isa = PBXBuildFile; fileRef = 409E5797224C48360064121C /* crash box.json */; };
+		409E579A224C64FB0064121C /* Helper+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E5799224C64FB0064121C /* Helper+Functions.swift */; };
+		409E579D224C65610064121C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E579C224C65610064121C /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		40174003224BDEA100273E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4017400C224BE8B100273E4B /* AcceleratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceleratorViewController.swift; sourceTree = "<group>"; };
 		40174012224C146800273E4B /* SpeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedManager.swift; sourceTree = "<group>"; };
+		409173AB224C344100044CB0 /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		409E5797224C48360064121C /* crash box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "crash box.json"; sourceTree = "<group>"; };
+		409E5799224C64FB0064121C /* Helper+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Functions.swift"; sourceTree = "<group>"; };
+		409E579C224C65610064121C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B2BEE283395FFC0C7CA44A13 /* Pods_Crash_Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crash_Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB53D51190E5D5EC9A154EBB /* Pods-Crash Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crash Box.release.xcconfig"; path = "Target Support Files/Pods-Crash Box/Pods-Crash Box.release.xcconfig"; sourceTree = "<group>"; };
 		CC6371D12311F619CBE9BDB9 /* Pods-Crash Box.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crash Box.debug.xcconfig"; path = "Target Support Files/Pods-Crash Box/Pods-Crash Box.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,9 +81,11 @@
 		40173FF6224BDE9F00273E4B /* Crash Box */ = {
 			isa = PBXGroup;
 			children = (
+				409E5796224C36700064121C /* JSON Files */,
 				40174014224C148100273E4B /* Classes */,
 				4017400B224BDEE400273E4B /* Services */,
 				40174009224BDED100273E4B /* Controller */,
+				409E579B224C65000064121C /* Helpers */,
 				4017400A224BDEDD00273E4B /* View */,
 				40173FFE224BDEA100273E4B /* Assets.xcassets */,
 				40174003224BDEA100273E4B /* Info.plist */,
@@ -88,6 +98,7 @@
 			children = (
 				40173FF9224BDE9F00273E4B /* ViewController.swift */,
 				4017400C224BE8B100273E4B /* AcceleratorViewController.swift */,
+				409173AB224C344100044CB0 /* LottieViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +128,23 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		409E5796224C36700064121C /* JSON Files */ = {
+			isa = PBXGroup;
+			children = (
+				409E5797224C48360064121C /* crash box.json */,
+			);
+			path = "JSON Files";
+			sourceTree = "<group>";
+		};
+		409E579B224C65000064121C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				409E5799224C64FB0064121C /* Helper+Functions.swift */,
+				409E579C224C65610064121C /* Colors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6E7E200F01710C3D64549114 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +165,7 @@
 				40173FF0224BDE9F00273E4B /* Sources */,
 				40173FF1224BDE9F00273E4B /* Frameworks */,
 				40173FF2224BDE9F00273E4B /* Resources */,
-				67B073321E8829ED13669AE8 /* [CP] Embed Pods Frameworks */,
+				266C17F13D21CB759770193A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409E5798224C48360064121C /* crash box.json in Resources */,
 				40174002224BDEA100273E4B /* LaunchScreen.storyboard in Resources */,
 				40173FFF224BDEA100273E4B /* Assets.xcassets in Resources */,
 				40173FFD224BDE9F00273E4B /* Main.storyboard in Resources */,
@@ -195,7 +224,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67B073321E8829ED13669AE8 /* [CP] Embed Pods Frameworks */ = {
+		266C17F13D21CB759770193A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,13 +233,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Crash Box/Pods-Crash Box-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SensingKit/SensingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SensingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -246,10 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409173AC224C344100044CB0 /* LottieViewController.swift in Sources */,
 				40173FFA224BDE9F00273E4B /* ViewController.swift in Sources */,
 				4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */,
+				409E579D224C65610064121C /* Colors.swift in Sources */,
 				40174013224C146800273E4B /* SpeedManager.swift in Sources */,
 				40173FF8224BDE9F00273E4B /* AppDelegate.swift in Sources */,
+				409E579A224C64FB0064121C /* Helper+Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
