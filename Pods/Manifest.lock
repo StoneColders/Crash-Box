@@ -59,6 +59,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.5.0):
     - GoogleUtilities/Logger
+  - JGProgressHUD (2.0.3)
   - leveldb-library (1.20)
   - lottie-ios (2.5.3)
   - nanopb (0.3.901):
@@ -73,6 +74,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - GoogleMaps
+  - JGProgressHUD
   - lottie-ios (~> 2.5.3)
   - SwiftyJSON
 
@@ -87,6 +89,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleMaps
     - GoogleUtilities
+    - JGProgressHUD
     - leveldb-library
     - lottie-ios
     - nanopb
@@ -102,11 +105,12 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 1624046ab1bcc5e170061a56ef5679000b079c8e
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: ed4b298338b95c3f766f96537e64771a72ddcf3e
+PODFILE CHECKSUM: 96fa9bfb9e37d64b7242c8dc6fb4bf1722103dc3
 
 COCOAPODS: 1.6.0

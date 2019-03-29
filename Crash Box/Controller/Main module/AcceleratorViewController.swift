@@ -102,8 +102,9 @@ class AcceleratorViewController: UIViewController {
         speedLabel.text = "\(Int(currentSpeed))"
         
         if Int(currentSpeed) == 0{
-            animationView.setAnimation(named: "road still")
+            animationView.setAnimation(named: "road moving")
             animationView.play()
+            animationView.loopAnimation = true
         }else if Int(currentSpeed) > 0{
             animationView.setAnimation(named: "road moving")
             animationView.play()

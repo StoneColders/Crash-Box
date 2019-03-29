@@ -12,4 +12,5 @@ target 'Crash Box' do
 	pod 'Firebase'
 	pod 'Firebase/Database'
 	pod 'Firebase/Core'
+	pod 'JGProgressHUD'
 end

@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import JGProgressHUD
 
 class MapDetailViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class MapDetailViewController: UIViewController {
     var lat:CLLocationDegrees?
     var locManager = CLLocationManager()
     var currentLocation: CLLocation!
+    
     
     
     //MARK: - IBOutlets
@@ -74,6 +76,17 @@ class MapDetailViewController: UIViewController {
     }
     
     @IBAction func requestHelp(_ sender: UIButton) {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Making request..."
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 6.0)
+        
+//        let hud2 = JGProgressHUD(style: .dark)
+//        hud2.textLabel.text = "Request accepted"
+//        hud2.show(in: self.view)
+//        hud2.dismiss(afterDelay: 14.0)
+        
+        
     }
     
     

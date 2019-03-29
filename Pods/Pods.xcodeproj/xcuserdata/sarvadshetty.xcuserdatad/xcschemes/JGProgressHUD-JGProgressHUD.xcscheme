@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0347882023278C8CCDDFA00A26563DF"
-               BuildableName = "Pods_Crash_Box.framework"
-               BlueprintName = "Pods-Crash Box"
+               BlueprintIdentifier = "FEF806502BEE6769704661F5678595A0"
+               BuildableName = "JGProgressHUD.bundle"
+               BlueprintName = "JGProgressHUD-JGProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D0347882023278C8CCDDFA00A26563DF"
-            BuildableName = "Pods_Crash_Box.framework"
-            BlueprintName = "Pods-Crash Box"
+            BlueprintIdentifier = "FEF806502BEE6769704661F5678595A0"
+            BuildableName = "JGProgressHUD.bundle"
+            BlueprintName = "JGProgressHUD-JGProgressHUD"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
