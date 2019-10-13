@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  Crash Box
 //
-//  Created by Sarvad shetty on 3/28/19.
+//  Created by Sarvad shetty on 10/13/19.
 //  Copyright © 2019 Sarvad shetty. All rights reserved.
 //
 
@@ -69,7 +69,6 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
     private func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
-//        mapView.clear()
         dataProvider.fetchPlacesNearCoordinate(coordinate, radius:searchRadius, types: searchedTypes) { places in
             places.forEach {
                 let marker = PlaceMarker(place: $0)
@@ -114,13 +113,11 @@ extension MapViewController: GMSMapViewDelegate {
         let name = placeMarker.place.name
         mdetail.name = name
         mdetail.long = placeMarker.place.coordinate.longitude
-        mdetail.lat = placeMarker.place.coordinate.longitude
+        mdetail.lat = placeMarker.place.coordinate.latitude
         
         print("coordinate: \(placeMarker.place.coordinate)")
-        
         self.present(mdetail, animated: true, completion: nil)
 
-        
         return UIView()
     }
 }

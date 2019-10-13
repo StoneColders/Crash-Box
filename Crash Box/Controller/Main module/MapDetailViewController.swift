@@ -2,7 +2,7 @@
 //  MapDetailViewController.swift
 //  Crash Box
 //
-//  Created by Sarvad shetty on 3/28/19.
+//  Created by Sarvad shetty on 10/13/19.
 //  Copyright © 2019 Sarvad shetty. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ import JGProgressHUD
 
 class MapDetailViewController: UIViewController {
     
-    //MARK: - Varaibles
+    //MARK: - Variables
     var image:UIImage?
     var name:String?
     var long:CLLocationDegrees?
@@ -39,7 +39,6 @@ class MapDetailViewController: UIViewController {
     }
     
     //MARK: - Function
-    
     func setup(){
         requestHelpOutlet.layer.borderWidth = 1
         requestHelpOutlet.layer.borderColor = UIColor.init(255, 0, 58, 1.0).cgColor
@@ -51,30 +50,21 @@ class MapDetailViewController: UIViewController {
         }
         
         nameOfPremise.text = "\(name!)"
-        
         locManager.requestWhenInUseAuthorization()
         
         if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() ==  .authorizedAlways){
             
             currentLocation = locManager.location
-            
             let location1 = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
             let location2 = CLLocation(latitude: lat!, longitude: long!)
-            
             let distance : CLLocationDistance = location2.distance(from: location1)
-            
             distanceLabel.text = "\(Int(distance/1000)) km"
-            
         }
         
     }
     
     //MARK: - IBAction
-    @IBAction func dismissTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func requestHelp(_ sender: UIButton) {
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Making request..."
@@ -85,8 +75,6 @@ class MapDetailViewController: UIViewController {
 //        hud2.textLabel.text = "Request accepted"
 //        hud2.show(in: self.view)
 //        hud2.dismiss(afterDelay: 14.0)
-        
-        
     }
     
     

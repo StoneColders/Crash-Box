@@ -1,6 +1,9 @@
 PODS:
   - Firebase (5.19.0):
     - Firebase/Core (= 5.19.0)
+  - Firebase/Auth (5.19.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.4.1)
   - Firebase/Core (5.19.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.8.0)
@@ -18,6 +21,11 @@ PODS:
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
+  - FirebaseAuth (5.4.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseAuthInterop (1.0.0)
   - FirebaseCore (5.4.0):
     - GoogleUtilities/Environment (~> 5.2)
@@ -59,6 +67,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.5.0):
     - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.2.2)
   - JGProgressHUD (2.0.3)
   - leveldb-library (1.20)
   - lottie-ios (2.5.3)
@@ -71,6 +80,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase
+  - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - GoogleMaps
@@ -82,6 +92,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAuth
     - FirebaseAuthInterop
     - FirebaseCore
     - FirebaseDatabase
@@ -89,6 +100,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleMaps
     - GoogleUtilities
+    - GTMSessionFetcher
     - JGProgressHUD
     - leveldb-library
     - lottie-ios
@@ -98,6 +110,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Firebase: c60d49e9c2630875a96207d15e2affb8364996d1
   FirebaseAnalytics: fd72a26bf8dac84cefba2f0864366f718555a5b0
+  FirebaseAuth: cbb892a66baed025efc179372598941252acf853
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
   FirebaseCore: 22a79a961c3951ef2f77b67bfbc99e454247b319
   FirebaseDatabase: 2c15b0ea6f2c6eb5e57413f9d6340f1e50b81ae3
@@ -105,12 +118,13 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 1624046ab1bcc5e170061a56ef5679000b079c8e
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 96fa9bfb9e37d64b7242c8dc6fb4bf1722103dc3
+PODFILE CHECKSUM: 5ec1d0e77642f6d7f3531d7e9dc2a984a4724e05
 
 COCOAPODS: 1.6.0

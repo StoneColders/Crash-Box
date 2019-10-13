@@ -2,7 +2,7 @@
 //  GooglePlace.swift
 //  Crash Box
 //
-//  Created by Sarvad shetty on 3/28/19.
+//  Created by Sarvad shetty on 10/12/19.
 //  Copyright © 2019 Sarvad shetty. All rights reserved.
 //
 
@@ -29,7 +29,7 @@ class GooglePlace {
         let lng = json["geometry"]["location"]["lng"].doubleValue as CLLocationDegrees
         coordinate = CLLocationCoordinate2DMake(lat, lng)
         
-        photoReference = json["photos"][0]["photo_reference"].string
+        photoReference = json["photos"][0]["photo_reference"].stringValue
         
         var foundType = "restaurant"
         let possibleTypes = acceptedTypes.count > 0 ? acceptedTypes : ["hospital","police"]

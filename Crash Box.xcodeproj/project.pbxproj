@@ -15,6 +15,13 @@
 		40174002224BDEA100273E4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40174000224BDEA100273E4B /* LaunchScreen.storyboard */; };
 		4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4017400C224BE8B100273E4B /* AcceleratorViewController.swift */; };
 		40174013224C146800273E4B /* SpeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40174012224C146800273E4B /* SpeedManager.swift */; };
+		401CE0AF2352379A0097E001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CE0AE2352379A0097E001 /* LoginViewController.swift */; };
+		401CE0B1235241920097E001 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CE0B0235241920097E001 /* SignUpViewController.swift */; };
+		401CE0B323524F980097E001 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CE0B223524F980097E001 /* UserModel.swift */; };
+		401CE0B5235251AF0097E001 /* Helper+Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CE0B4235251AF0097E001 /* Helper+Variables.swift */; };
+		401CE0B723525E1A0097E001 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CE0B623525E1A0097E001 /* DataService.swift */; };
+		401CE0B92352C1290097E001 /* SpeedoMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CE0B82352C1290097E001 /* SpeedoMeter.swift */; };
+		401CE0BB2352D8E10097E001 /* AreaNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CE0BA2352D8E10097E001 /* AreaNotifier.swift */; };
 		409173AC224C344100044CB0 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409173AB224C344100044CB0 /* LottieViewController.swift */; };
 		409E5798224C48360064121C /* crash box.json in Resources */ = {isa = PBXBuildFile; fileRef = 409E5797224C48360064121C /* crash box.json */; };
 		409E579A224C64FB0064121C /* Helper+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E5799224C64FB0064121C /* Helper+Functions.swift */; };
@@ -52,6 +59,13 @@
 		40174003224BDEA100273E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4017400C224BE8B100273E4B /* AcceleratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceleratorViewController.swift; sourceTree = "<group>"; };
 		40174012224C146800273E4B /* SpeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedManager.swift; sourceTree = "<group>"; };
+		401CE0AE2352379A0097E001 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		401CE0B0235241920097E001 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		401CE0B223524F980097E001 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		401CE0B4235251AF0097E001 /* Helper+Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Variables.swift"; sourceTree = "<group>"; };
+		401CE0B623525E1A0097E001 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		401CE0B82352C1290097E001 /* SpeedoMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedoMeter.swift; sourceTree = "<group>"; };
+		401CE0BA2352D8E10097E001 /* AreaNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaNotifier.swift; sourceTree = "<group>"; };
 		409173AB224C344100044CB0 /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
 		409E5797224C48360064121C /* crash box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "crash box.json"; sourceTree = "<group>"; };
 		409E5799224C64FB0064121C /* Helper+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Functions.swift"; sourceTree = "<group>"; };
@@ -172,6 +186,8 @@
 				409E579E224C6AED0064121C /* CustomTabbarHeader.swift */,
 				409E57B7224CB1430064121C /* Marker.swift */,
 				409E57C3224CDE530064121C /* Textfield.swift */,
+				401CE0B82352C1290097E001 /* SpeedoMeter.swift */,
+				401CE0BA2352D8E10097E001 /* AreaNotifier.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 			children = (
 				409E5799224C64FB0064121C /* Helper+Functions.swift */,
 				409E579C224C65610064121C /* Colors.swift */,
+				401CE0B4235251AF0097E001 /* Helper+Variables.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -235,6 +252,8 @@
 			children = (
 				409E57BA224CB33A0064121C /* GooglePlace.swift */,
 				409E57BC224CB3600064121C /* GoogleDataProvider.swift */,
+				401CE0B223524F980097E001 /* UserModel.swift */,
+				401CE0B623525E1A0097E001 /* DataService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +263,8 @@
 			children = (
 				40173FF9224BDE9F00273E4B /* ViewController.swift */,
 				409E57C0224CDCF40064121C /* FormViewController.swift */,
+				401CE0AE2352379A0097E001 /* LoginViewController.swift */,
+				401CE0B0235241920097E001 /* SignUpViewController.swift */,
 			);
 			path = "Reg module";
 			sourceTree = "<group>";
@@ -349,6 +370,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Crash Box/Pods-Crash Box-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -360,6 +382,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -424,11 +447,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				409173AC224C344100044CB0 /* LottieViewController.swift in Sources */,
+				401CE0BB2352D8E10097E001 /* AreaNotifier.swift in Sources */,
+				401CE0B5235251AF0097E001 /* Helper+Variables.swift in Sources */,
 				40173FFA224BDE9F00273E4B /* ViewController.swift in Sources */,
 				409E57C1224CDCF40064121C /* FormViewController.swift in Sources */,
 				409E57BB224CB33A0064121C /* GooglePlace.swift in Sources */,
+				401CE0B92352C1290097E001 /* SpeedoMeter.swift in Sources */,
 				409E57BD224CB3600064121C /* GoogleDataProvider.swift in Sources */,
 				4017400D224BE8B100273E4B /* AcceleratorViewController.swift in Sources */,
+				401CE0B1235241920097E001 /* SignUpViewController.swift in Sources */,
 				409E579F224C6AED0064121C /* CustomTabbarHeader.swift in Sources */,
 				409E57D2224D5A940064121C /* SettingsViewController.swift in Sources */,
 				409E57CE224D3F950064121C /* MapDetailViewController.swift in Sources */,
@@ -436,6 +463,9 @@
 				409E579D224C65610064121C /* Colors.swift in Sources */,
 				409E57B8224CB1430064121C /* Marker.swift in Sources */,
 				40174013224C146800273E4B /* SpeedManager.swift in Sources */,
+				401CE0B723525E1A0097E001 /* DataService.swift in Sources */,
+				401CE0AF2352379A0097E001 /* LoginViewController.swift in Sources */,
+				401CE0B323524F980097E001 /* UserModel.swift in Sources */,
 				40173FF8224BDE9F00273E4B /* AppDelegate.swift in Sources */,
 				409E57C4224CDE530064121C /* Textfield.swift in Sources */,
 				409E579A224C64FB0064121C /* Helper+Functions.swift in Sources */,

@@ -2,7 +2,7 @@
 //  GoogleDataProvider.swift
 //  Crash Box
 //
-//  Created by Sarvad shetty on 3/28/19.
+//  Created by Sarvad shetty on 10/12/19.
 //  Copyright © 2019 Sarvad shetty. All rights reserved.
 //
 
@@ -54,6 +54,7 @@ class GoogleDataProvider {
             }
             results.forEach {
                 let place = GooglePlace(dictionary: $0, acceptedTypes: types)
+                print("place: \($0)")
                 placesArray.append(place)
                 if let reference = place.photoReference {
                     self.fetchPhotoFromReference(reference) { image in

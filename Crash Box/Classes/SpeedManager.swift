@@ -2,7 +2,7 @@
 //  SpeedManager.swift
 //  Crash Box
 //
-//  Created by Sarvad shetty on 3/28/19.
+//  Created by Sarvad shetty on 10/12/19.
 //  Copyright © 2019 Sarvad shetty. All rights reserved.
 //
 
@@ -64,8 +64,8 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
             self.currentSpeed = max(0.0, speedInMetersPerSecond)
             self.maxSpeed = max(self.maxSpeed, self.currentSpeed)
             
-            let userInfo = [Notifications.CurrentSpeed: NSNumber(value: self.currentSpeed),
-                            Notifications.MaxSpeed: NSNumber(value: self.maxSpeed)]
+            let userInfo = [Notifications.CurrentSpeed: NSNumber(value: self.currentSpeed * 3.6),
+                            Notifications.MaxSpeed: NSNumber(value: self.maxSpeed * 3.6)]
             
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: Notifications.CurrentSpeedNotification.rawValue), object: self, userInfo: userInfo)
             self.saveSpeeds()

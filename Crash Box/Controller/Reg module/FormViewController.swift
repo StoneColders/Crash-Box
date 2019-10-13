@@ -2,12 +2,13 @@
 //  FormViewController.swift
 //  Crash Box
 //
-//  Created by Sarvad shetty on 3/28/19.
+//  Created by Sarvad shetty on 10/13/19.
 //  Copyright © 2019 Sarvad shetty. All rights reserved.
 //
 
 import UIKit
 import Firebase
+import JGProgressHUD
 
 class FormViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class FormViewController: UIViewController {
     var contact1Text:String!
     var contact2Text:String!
     var contact3Text:String!
+    var emailValue:String!
+    var passwordValue:String!
     //db part
     var ref: DatabaseReference!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -42,10 +45,15 @@ class FormViewController: UIViewController {
     
     //MARK: - IBAction
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        print("send button pressed")
+        
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Loading.."
+        hud.show(in: self.view)
+        
         if nameTextfield.text == "" && bloodGroupTextfield.text == "" && contact1Textfield.text == "" && contact2Textfield.text == "" && contact3Textfield.text == ""{
             let alert = UIAlertController(title: "Notice", message: "Please fill in all your fields!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            hud.dismiss(animated: true)
             self.present(alert, animated: true, completion: nil)
         }else{
             nameText = nameTextfield.text!
@@ -54,9 +62,15 @@ class FormViewController: UIViewController {
             contact2Text = contact2Textfield.text!
             contact3Text = contact3Textfield.text!
             //save to db
-            self.save(cn1: contact1Text, cn2: contact2Text, cn3: contact3Text) { (val) in
-                if val == "done"{
+
+            //create user object
+            let userObject = User(emailValue, passwordValue, nameText, bloodGroup, contact1Text, contact2Text, contact3Text)
+            userObject.Register { (st) in
+                if st == "created" {
+                    hud.dismiss(animated: true)
                     self.goToApp()
+                } else {
+                    hud.dismiss(animated: true)
                 }
             }
         }
@@ -78,8 +92,6 @@ class FormViewController: UIViewController {
         guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else{
             fatalError("couldnt init")
         }
-        //persist state in userdefaults
-        UserDefaults.standard.set(true, forKey: "KFIRSTSTATE")
         self.appDelegate.window?.rootViewController = vc
     }
 }
